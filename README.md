@@ -1,4 +1,4 @@
-# notes-app-project
+# notes-app
 
 ## Building and running on localhost
 
@@ -11,11 +11,17 @@ npm install
 To create a production build:
 
 ```sh
-npm run build
+npm run build:prod
 ```
 
 To create a development build:
 
 ```sh
-npm run dev
+npm run build:dev
+```
+
+To run a localhost in development mode:
+
+```sh
+npm run start
 ```

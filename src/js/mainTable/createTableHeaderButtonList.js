@@ -1,40 +1,42 @@
-import { createElement } from './createElement';
+import { createElement } from '../utils/createElement';
 
 export const createHeaderButtonList = () => {
   const iconTrash = createElement('i', {
-    class: 'icon fa-solid fa-trash',
+    class: 'tableHeaderIconTrash fa-solid fa-trash',
     style: 'color: #ffffff',
   });
 
   const buttonTrash = createElement(
     'button',
-    { class: 'buttonTrash ease-in duration-200 hover:scale-125' },
+    {
+      class: 'tableHeaderButtonTrash ease-in duration-200 hover:scale-125',
+    },
     iconTrash
   );
 
   const buttonListItemTrash = createElement(
     'li',
     {
-      class: 'buttonListItem',
+      class: 'tableHeaderButtonListItem',
     },
     buttonTrash
   );
 
   const iconArchive = createElement('i', {
-    class: 'icon fa-solid fa-file-arrow-down',
+    class: 'tableHeaderIconArchive fa-solid fa-file-arrow-down',
     style: 'color: #ffffff',
   });
 
   const buttonArchive = createElement(
     'button',
-    { class: 'buttonArchive ease-in duration-200 hover:scale-125' },
+    { class: 'tableHeaderButtonArchive ease-in duration-200 hover:scale-125' },
     iconArchive
   );
 
   const buttonListItemArchive = createElement(
     'li',
     {
-      class: 'buttonListItem',
+      class: 'tableHeaderButtonListItem',
     },
     buttonArchive
   );
@@ -42,7 +44,7 @@ export const createHeaderButtonList = () => {
   const buttonList = createElement(
     'ul',
     {
-      class: 'buttonList flex justify-center gap-x-3',
+      class: 'tableHeaderButtonList flex justify-center gap-x-3',
     },
     [buttonListItemArchive, buttonListItemTrash]
   );

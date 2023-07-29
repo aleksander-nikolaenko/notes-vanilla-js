@@ -1,6 +1,6 @@
-import { createElement } from './createElement';
+import { createElement } from '../utils/createElement';
 
-export const createRowButtonList = () => {
+export const createTableBodyRowButtonList = () => {
   const iconEdit = createElement('i', {
     class: 'icon fa-solid fa-pen',
     style: 'color: #9ca3af',

@@ -1,32 +1,34 @@
-import { createElement } from './createElement';
+import { createElement } from '../utils/createElement';
 import { createHeaderButtonList } from './createTableHeaderButtonList';
 
 export const createTableHeader = () => {
   const tableHeaderButtons = createElement(
     'th',
     {
-      class: 'tableHeaderTitle py-2 w-1/12 rounded-r-lg bg-gray-400 text-white',
+      class:
+        'tableHeaderTitle py-2 px-4 w-2/12 rounded-r-lg bg-gray-400 text-white',
     },
     createHeaderButtonList()
   );
   const tableHeaderDates = createElement(
     'th',
     {
-      class: 'tableHeaderTitle py-2 bg-gray-400 text-white',
+      class: 'tableHeaderTitle py-2 px-4 bg-gray-400 text-left text-white',
     },
     'Dates'
   );
   const tableHeaderContent = createElement(
     'th',
     {
-      class: 'tableHeaderTitle py-2 w-1/4 bg-gray-400 text-white',
+      class:
+        'tableHeaderTitle py-2 px-4 w-1/4 bg-gray-400 text-left text-white',
     },
     'Content'
   );
   const tableHeaderCategory = createElement(
     'th',
     {
-      class: 'tableHeaderTitle py-2 bg-gray-400 text-white',
+      class: 'tableHeaderTitle py-2 px-4 bg-gray-400 text-left text-white',
     },
     'Category'
   );
@@ -34,7 +36,7 @@ export const createTableHeader = () => {
   const tableHeaderCreated = createElement(
     'th',
     {
-      class: 'tableHeaderTitle py-2 bg-gray-400 text-white',
+      class: 'tableHeaderTitle py-2 px-4 bg-gray-400 text-left text-white',
     },
     'Created'
   );
@@ -42,7 +44,8 @@ export const createTableHeader = () => {
   const tableHeaderName = createElement(
     'th',
     {
-      class: 'tableHeaderTitle py-2 w-1/4 rounded-l-lg bg-gray-400 text-white',
+      class:
+        'tableHeaderTitle py-2 px-4 w-1/4 rounded-l-lg bg-gray-400 text-white',
     },
     'Name'
   );
@@ -65,7 +68,7 @@ export const createTableHeader = () => {
   const tableHeader = createElement(
     'thead',
     {
-      class: 'tableHeader sticky top-[30px] w-full',
+      class: 'tableHeader sticky top-[27px] w-full',
     },
     row
   );
