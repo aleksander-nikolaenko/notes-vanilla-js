@@ -1,4 +1,4 @@
-import { createTableBodyRows } from '../createTableBodyRows';
+import { createTableBodyRows } from '../commonElements/createTableBodyRows';
 import { createElement } from '../utils/createElement';
 import { createSummaryTableBodyRow } from './createSummaryTableBodyRow';
 

@@ -1,4 +1,4 @@
-import { createElement } from './utils/createElement';
+import { createElement } from '../utils/createElement';
 
 export const createIconFromCategory = (category, categoryList) => {
   let icon;

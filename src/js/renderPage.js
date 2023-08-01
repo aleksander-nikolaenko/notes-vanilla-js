@@ -1,35 +1,19 @@
-import { createButtonCreateNote } from './createButtonCreateNote';
 import { createMainTable } from './mainTable/createMainTable';
+import { createContainerCreateNote } from './noteForm/createContainerCreateNote';
 import { createSummaryTable } from './summaryTable/createSummaryTable';
-import { getFromLocalStorage } from './utils/localStorage';
-import { data } from './utils/tableData';
+import { getSummaryData } from './utils/getSummaryData';
+import { activeData, archivedData } from './utils/tableData';
 
 const containerRef = document.querySelector('.app');
 
-const mainTableData = getFromLocalStorage('actualNotes') || data;
+const activeTableData = activeData || [];
 
-const summaryTableData = [
-  {
-    category: 'Task',
-    active: 2,
-    archive: 5,
-  },
-  {
-    category: 'Random Thought',
-    active: 1,
-    archive: 3,
-  },
-  {
-    category: 'Idea',
-    active: 4,
-    archive: 2,
-  },
-];
+const archivedTableData = archivedData || [];
 
-console.log(mainTableData);
+const summaryTableData = getSummaryData(activeTableData, archivedTableData);
 
 containerRef.append(
-  createMainTable(mainTableData),
-  createButtonCreateNote(),
+  createMainTable(activeTableData),
+  createContainerCreateNote(),
   createSummaryTable(summaryTableData)
 );

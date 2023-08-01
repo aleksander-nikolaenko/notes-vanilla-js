@@ -6,14 +6,15 @@ export const createTableHeader = () => {
     'th',
     {
       class:
-        'tableHeaderTitle py-2 px-4 w-2/12 rounded-r-lg bg-gray-400 text-white',
+        'tableHeaderTitle py-2 px-4 w-1/12 rounded-r-lg bg-gray-400 text-white',
     },
     createHeaderButtonList()
   );
   const tableHeaderDates = createElement(
     'th',
     {
-      class: 'tableHeaderTitle py-2 px-4 bg-gray-400 text-left text-white',
+      class:
+        'tableHeaderTitle py-2 px-4 w-1/12 bg-gray-400 text-left text-white',
     },
     'Dates'
   );
@@ -21,14 +22,15 @@ export const createTableHeader = () => {
     'th',
     {
       class:
-        'tableHeaderTitle py-2 px-4 w-1/4 bg-gray-400 text-left text-white',
+        'tableHeaderTitle py-2 px-4 w-3/12 bg-gray-400 text-left text-white',
     },
     'Content'
   );
   const tableHeaderCategory = createElement(
     'th',
     {
-      class: 'tableHeaderTitle py-2 px-4 bg-gray-400 text-left text-white',
+      class:
+        'tableHeaderTitle py-2 px-4 w-1/12 bg-gray-400 text-left text-white',
     },
     'Category'
   );
@@ -36,7 +38,8 @@ export const createTableHeader = () => {
   const tableHeaderCreated = createElement(
     'th',
     {
-      class: 'tableHeaderTitle py-2 px-4 bg-gray-400 text-left text-white',
+      class:
+        'tableHeaderTitle py-2 px-4 w-2/12 bg-gray-400 text-left text-white',
     },
     'Created'
   );
@@ -45,7 +48,7 @@ export const createTableHeader = () => {
     'th',
     {
       class:
-        'tableHeaderTitle py-2 px-4 w-1/4 rounded-l-lg bg-gray-400 text-white',
+        'tableHeaderTitle py-2 px-4 w-2/12 rounded-l-lg bg-gray-400 text-white',
     },
     'Name'
   );

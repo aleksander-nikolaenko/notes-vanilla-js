@@ -1,5 +1,5 @@
 import { createElement } from '../utils/createElement';
-import { createTableBodyRows } from '../createTableBodyRows';
+import { createTableBodyRows } from '../commonElements/createTableBodyRows';
 import { createTableBodyRow } from './createTableBodyRow';
 
 export const createTableBody = (data) => {

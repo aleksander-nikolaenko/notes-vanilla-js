@@ -1,6 +1,9 @@
+import { archiveNote } from '../utils/archiveNote';
 import { createElement } from '../utils/createElement';
+import { deleteNote } from '../utils/deleteNote';
+import { updateTables } from '../utils/updateTables';
 
-export const createTableBodyRowButtonList = () => {
+export const createTableBodyRowButtonList = (noteID) => {
   const iconEdit = createElement('i', {
     class: 'icon fa-solid fa-pen',
     style: 'color: #9ca3af',
@@ -61,9 +64,21 @@ export const createTableBodyRowButtonList = () => {
   const buttonList = createElement(
     'ul',
     {
-      class: 'buttonList flex justify-center gap-x-3',
+      class: 'buttonList flex justify-between',
     },
     [buttonListItemEdit, buttonListItemArchive, buttonListItemTrash]
   );
+
+  buttonList.addEventListener('click', (e) => {
+    if (buttonTrash.contains(e.target)) {
+      deleteNote(noteID);
+    }
+
+    if (buttonArchive.contains(e.target)) {
+      archiveNote(noteID);
+    }
+    updateTables();
+  });
+
   return buttonList;
 };

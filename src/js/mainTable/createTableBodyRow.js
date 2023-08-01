@@ -1,10 +1,10 @@
-import { createIconFromCategory } from '../createIconFromCategory';
+import { createIconFromCategory } from '../commonElements/createIconFromCategory';
 import { createElement } from '../utils/createElement';
 import { categoryList } from '../utils/tableData';
 import { createTableBodyRowButtonList } from './createTableBodyRowButtonList';
 
 export const createTableBodyRow = (data) => {
-  const { name, created, category, content, dates } = data;
+  const { id, name, created, category, content, dates } = data;
 
   const tableHeaderButtons = createElement(
     'th',
@@ -12,7 +12,7 @@ export const createTableBodyRow = (data) => {
       class:
         'tableHeaderTitle px-4 py-2 w-1/12 rounded-r bg-blue-100 text-gray-400',
     },
-    createTableBodyRowButtonList()
+    createTableBodyRowButtonList(id)
   );
   const tableRowDates = createElement(
     'td',

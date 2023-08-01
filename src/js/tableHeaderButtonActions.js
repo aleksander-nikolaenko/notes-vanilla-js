@@ -1,17 +1,13 @@
 import { updateMainTableBody } from './mainTable/updateMainTableBody';
-import { getFromLocalStorage } from './utils/localStorage';
-import { data } from './utils/tableData';
+import { activeData, archivedData } from './utils/tableData';
 
 const buttonListRef = document.querySelector('.tableHeaderButtonList');
 const buttonTrashRef = document.querySelector('.tableHeaderButtonTrash');
 const buttonArchiveRef = document.querySelector('.tableHeaderButtonArchive');
 const tableCaptionRef = document.querySelector('.tableCaption');
 
-const active = getFromLocalStorage('activeNotes') || [];
-const archived = getFromLocalStorage('archivedNotes') || [];
-
-const activeTableData = active.length ? actual : data;
-const archivedTableData = archived.length ? archived : data;
+const activeTableData = activeData || [];
+const archivedTableData = archivedData || [];
 
 buttonListRef.addEventListener('click', (e) => {
   if (buttonTrashRef.contains(e.target)) {

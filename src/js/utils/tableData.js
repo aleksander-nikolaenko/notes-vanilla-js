@@ -1,6 +1,8 @@
 export const categoryList = ['Task', 'Random Thought', 'Idea'];
-export const data = [
+export let archivedData = [];
+export let activeData = [
   {
+    id: '1',
     name: 'Shopping list dhfkj fhdsjfh shfdljslfk disflsdh dslfhlsdh idsh',
     created: 'April 20, 2021',
     category: 'Task',
@@ -8,6 +10,7 @@ export const data = [
     dates: '',
   },
   {
+    id: '2',
     name: 'The teory of... ',
     created: 'April 27, 2021',
     category: 'Random Thought',
@@ -15,6 +18,7 @@ export const data = [
     dates: '',
   },
   {
+    id: '3',
     name: 'New Feature ',
     created: 'May 05, 2021',
     category: 'Idea',
@@ -22,6 +26,7 @@ export const data = [
     dates: '10/5/2021, 15/05/2021',
   },
   {
+    id: '4',
     name: 'Shopping list',
     created: 'May 06, 2021',
     category: 'Task',
@@ -29,6 +34,7 @@ export const data = [
     dates: '',
   },
   {
+    id: '5',
     name: 'The teory of... ',
     created: 'May 08, 2021',
     category: 'Random Thought',
@@ -36,6 +42,7 @@ export const data = [
     dates: '',
   },
   {
+    id: '6',
     name: 'Shopping list',
     created: 'May 10, 2021',
     category: 'Task',
@@ -43,6 +50,7 @@ export const data = [
     dates: '',
   },
   {
+    id: '7',
     name: 'New Feature ',
     created: 'May 15, 2021',
     category: 'Task',

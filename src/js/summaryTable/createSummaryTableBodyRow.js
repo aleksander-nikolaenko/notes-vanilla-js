@@ -1,4 +1,4 @@
-import { createIconFromCategory } from '../createIconFromCategory';
+import { createIconFromCategory } from '../commonElements/createIconFromCategory';
 import { createElement } from '../utils/createElement';
 import { categoryList } from '../utils/tableData';
 
@@ -14,7 +14,7 @@ export const createSummaryTableBodyRow = (data) => {
     createElement(
       'p',
       { class: 'summaryArchiveText w-10/12 truncate' },
-      archive
+      archive.toString()
     )
   );
 
@@ -23,7 +23,11 @@ export const createSummaryTableBodyRow = (data) => {
     {
       class: 'summaryTableRowActive px-4 py-2 bg-blue-100 text-gray-400',
     },
-    createElement('p', { class: 'summaryActiveText w-10/12 truncate' }, active)
+    createElement(
+      'p',
+      { class: 'summaryActiveText w-10/12 truncate' },
+      active.toString()
+    )
   );
 
   const tableRowCategory = createElement(
