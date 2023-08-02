@@ -2,6 +2,7 @@ export const extractDatesFromString = (str) => {
   const dateFormats = [
     /\b\d{1,2}\/\d{1,2}\/\d{4}\b/g, // dd/mm/yyyy
     /\b\d{4}-\d{2}-\d{2}\b/g, // yyyy-mm-dd
+    /\b\d{2}-\d{2}-\d{4}\b/g, // dd-mm-yyyy
     /\b\d{1,2}\/\d{1,2}\/\d{2}\b/g, // dd/mm/yy
     /\b\d{2}\/\d{2}\/\d{2}\b/g, // mm/dd/yy
     /\b\d{1,2}\s(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s\d{4}\b/gi, // dd Mmm yyyy (e.g., 1 Jan 2021)

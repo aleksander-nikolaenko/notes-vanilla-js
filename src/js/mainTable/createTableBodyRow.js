@@ -6,11 +6,11 @@ import { createTableBodyRowButtonList } from './createTableBodyRowButtonList';
 export const createTableBodyRow = (data) => {
   const { id, name, created, category, content, dates } = data;
 
-  const tableHeaderButtons = createElement(
-    'th',
+  const tableRowButtons = createElement(
+    'td',
     {
       class:
-        'tableHeaderTitle px-4 py-2 w-1/12 rounded-r bg-blue-100 text-gray-400',
+        'tableRowButtons px-4 py-2 w-1/12 rounded-r bg-blue-100 text-gray-400',
     },
     createTableBodyRowButtonList(id)
   );
@@ -79,7 +79,7 @@ export const createTableBodyRow = (data) => {
   const row = createElement(
     'tr',
     {
-      class: 'tableBodyRow w-full',
+      class: `tableBodyRow-${id} w-full`,
     },
     [
       tableRowName,
@@ -87,7 +87,7 @@ export const createTableBodyRow = (data) => {
       tableRowCategory,
       tableRowContent,
       tableRowDates,
-      tableHeaderButtons,
+      tableRowButtons,
     ]
   );
   return row;

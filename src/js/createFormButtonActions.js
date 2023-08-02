@@ -11,24 +11,27 @@ const createFormContainerRef = document.querySelector('.createFormContainer');
 
 const onSubmit = (e) => {
   e.preventDefault();
+  try {
+    const name = document.getElementById('noteName').value;
+    const category = document.getElementById('noteCategory').value;
+    const content = document.getElementById('noteContent').value;
+    const created = formatDate(new Date());
+    const dates = extractDatesFromString(content);
+    const id = generateUuid();
 
-  const name = document.getElementById('noteName').value;
-  const category = document.getElementById('noteCategory').value;
-  const content = document.getElementById('noteContent').value;
-  const created = formatDate(new Date());
-  const dates = extractDatesFromString(content);
-  const id = generateUuid();
+    const newNote = {
+      id,
+      name,
+      created,
+      category,
+      content,
+      dates,
+    };
 
-  const newNote = {
-    id,
-    name,
-    created,
-    category,
-    content,
-    dates,
-  };
-
-  defineDataList().push(newNote);
+    defineDataList().push(newNote);
+  } catch (error) {
+    console.error(error.message);
+  }
 
   updateTables();
 

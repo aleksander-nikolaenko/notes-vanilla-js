@@ -11,7 +11,7 @@ export const createNoteForm = (onSubmit, onClose, values = {}) => {
     {
       type: 'submit',
       class:
-        'saveButton px-4 py-1 rounded border-solid border-gray-400 bg-gray-100 text-gray-900 hover:scale-105 active:scale-100',
+        'saveButton px-4 py-1 mt-8 rounded border-solid border-gray-400 bg-gray-100 text-gray-900 hover:scale-105 active:scale-100',
     },
     'Save'
   );
@@ -21,7 +21,7 @@ export const createNoteForm = (onSubmit, onClose, values = {}) => {
     {
       type: 'button',
       class:
-        'closeButton px-4 py-1 rounded border-solid border-gray-400 bg-gray-100 text-gray-900 hover:scale-105 active:scale-100',
+        'closeButton px-4 py-1 mt-8 rounded border-solid border-gray-400 bg-gray-100 text-gray-900 hover:scale-105 active:scale-100',
     },
     'Close'
   );
@@ -32,7 +32,7 @@ export const createNoteForm = (onSubmit, onClose, values = {}) => {
     'form',
     {
       class:
-        'noteForm py-2 px-4 flex flex-wrap justify-between items-end bg-blue-100 rounded',
+        'noteForm py-2 px-4 flex flex-wrap justify-between items-start bg-blue-100 rounded',
     },
     [
       createNoteNameInput(name),

@@ -18,6 +18,7 @@ export const createHeaderButtonList = () => {
     'li',
     {
       class: 'tableHeaderButtonListItem',
+      title: 'Archived notes',
     },
     buttonTrash
   );
@@ -37,6 +38,7 @@ export const createHeaderButtonList = () => {
     'li',
     {
       class: 'tableHeaderButtonListItem',
+      title: 'Active notes',
     },
     buttonArchive
   );
