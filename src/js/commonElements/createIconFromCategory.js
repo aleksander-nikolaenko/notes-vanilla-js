@@ -14,6 +14,7 @@ export const createIconFromCategory = (category, categoryList) => {
         class: 'icon fa-solid fa-head-side-virus',
         style: 'color: #ffffff',
       });
+      break;
     case categoryList[2]:
       icon = createElement('i', {
         class: 'icon fa-solid fa-lightbulb',
